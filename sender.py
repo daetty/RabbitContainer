@@ -10,14 +10,23 @@ queue_name = "testqueue"
 
 # Establish a connection to RabbitMQ
 print("SendQueue: " + rabbitmq_url)
-connection_params = pika.URLParameters(rabbitmq_url)
-connection = pika.BlockingConnection(connection_params)
-channel = connection.channel()
-print("Connection established")
-
-# Declare the queue
-channel.queue_declare(queue=queue_name)
-print("Queue declared")
+retry = 0
+while True:
+    if retry > 5:
+        break
+    try:
+        connection_params = pika.URLParameters(rabbitmq_url)
+        connection = pika.BlockingConnection(connection_params)
+        channel = connection.channel()
+        print("Connection established")
+        # Declare the queue
+        channel.queue_declare(queue=queue_name)
+        print("Queue declared")
+        break
+    except Exception as e:
+        print("Retry establishing connection after 5sec ", e)
+        time.sleep(5)
+        retry +=1
 
 while True:
     message = "Hello from sender.py!"

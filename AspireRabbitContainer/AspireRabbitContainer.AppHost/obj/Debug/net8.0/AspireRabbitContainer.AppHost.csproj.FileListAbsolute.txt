@@ -104,3 +104,4 @@ C:\dev\RabbitContainer\AspireRabbitContainer\AspireRabbitContainer.AppHost\obj\D
 C:\dev\RabbitContainer\AspireRabbitContainer\AspireRabbitContainer.AppHost\obj\Debug\net8.0\AspireRabbitContainer.AppHost.pdb
 C:\dev\RabbitContainer\AspireRabbitContainer\AspireRabbitContainer.AppHost\obj\Debug\net8.0\AspireRabbitContainer.AppHost.genruntimeconfig.cache
 C:\dev\RabbitContainer\AspireRabbitContainer\AspireRabbitContainer.AppHost\obj\Debug\net8.0\ref\AspireRabbitContainer.AppHost.dll
+C:\dev\RabbitContainer\AspireRabbitContainer\AspireRabbitContainer.AppHost\obj\Debug\net8.0\AspireRabbitContainer.AppHost.sourcelink.json
